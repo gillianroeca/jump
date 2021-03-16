@@ -1,0 +1,42 @@
+
+<!doctype html>
+<html>
+<head>
+<style type="text/css">
+
+  .float-child {
+    float: left;
+    padding: 10px;
+
+}  
+</style>
+</head>
+<body>
+    <p>Jump Challenge:</p>
+    <form>
+        <div class="float-child"><input type="text" id="one" name='first' value="" /></div>
+        <div class="float-child"><input type="button" id="two" name='middle' value="JUMP>" onclick="myFunction()" /></div>
+        <div class="float-child"><input type="text" id="three" name='last' value=""/></div>
+        <script>
+        function myFunction()
+        {
+          text1 = document.getElementById('one');
+          text2 = document.getElementById('three');
+          label = document.getElementById('two'); 
+          if(label.value == "JUMP>")
+          {
+            text2.value = text1.value;
+            text1.value = "";
+            label.value = "<JUMP";
+          }
+          else
+          {
+            text1.value = text2.value;
+            text2.value = "";
+            label.value = "JUMP>";
+          }
+        }
+        </script>
+    </form> 
+</body>
+</html>
